@@ -56,6 +56,21 @@
         </div>
     </nav>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-mt-2">
+                {% for message in messages %}
+                <div class="alert {{ message.tags }} alert-dismissble fade show" id="msg" role="alert">
+                {{ message | safe }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+
+                </button>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
     <main class="flex-shrink-0 main-bg">
         {% block content %}
         <!-- Content Goes here -->
@@ -67,6 +82,14 @@
         <p class="m-0 text-center text-gold">Made by Cameron Hughes-Cheshire</p>
         <p class="m-0 text-center text-gold">Check out my other work <a href="https://github.com/CHCheshire">here</a> on Github</p>
     </footer>
+    <script>
+        setTimeout(function () {
+            let messages = document.getElementById("msg");
+            let alert = new bootstrap.Alert(messages);
+            alert.close();
+
+        }, 3000);
+    </script>
 </body>
 
 </html>

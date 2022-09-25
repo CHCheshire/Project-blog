@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 
 body {
-    background-color: #F9FAFC;
+    background-color: #F5f5f5;
 }
 
 .brand {
@@ -12,9 +12,6 @@ body {
     color: #4A4A4F;
 }
 
-.red-o {
-    color: #E84610;
-}
 
 .thin {
     font-weight: 300;
@@ -97,7 +94,7 @@ body {
 
 .post-link:hover,
 .page-link {
-    color: #E84610;
+    color: #CCBA78;
 }
 
 .post-title {
@@ -111,18 +108,18 @@ body {
 }
 
 .btn-signup {
-    background-color: #23BBBB;
-    color: #fff;
+    background-color: #445261;
+    color: #CCBA78;
 }
 
 .btn-signup:hover,
 .btn-signup:active {
     background-color: #fff;
-    color: #23BBBB;
+    color: #445261;
 }
 
 .link {
-    color: #23BBBB;
+    color: #445261;
     text-decoration: none;
 }
 
