@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@300&display=swap');
+
 body {
     background-color: #F9FAFC;
 }
@@ -129,14 +131,23 @@ body {
 }
 
 .btn-like {
-    color: #E84610;
+    color: #CCBA78;
     border: none;
     background: transparent;
 }
 
 .btn-like:hover,
 .btn-like:active {
-    color: #E84610;
+    color: #CCBA78;
     background: transparent;
     border: none;
+}
+
+.title {
+    font-size:24px;
+    font-family:'Exo', sans-serif;
+}
+
+.text-gold {
+    color:#CCBA78;
 }
