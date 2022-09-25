@@ -24,15 +24,15 @@
 
     <!-- Navigation -->
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <nav class="navbar navbar-expand-lg navbar-light dark-bg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}"><span class="title">The Hobby Corner</span></a>
+            <a class="navbar-brand" href="{% url 'home' %}"><span class="title text-gold">The Hobby Corner</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
@@ -49,7 +49,7 @@
                     </li>
                     {% endif %}
                 </ul>
-                <span class="navbar-text text-muted">
+                <span class="nav-text">
                     My nerdy blog
                 </span>
             </div>
@@ -65,10 +65,7 @@
     <!-- Footer -->
     <footer class="footer mt-auto py-3 dark-bg">
         <p class="m-0 text-center text-gold">Made by Cameron Hughes-Cheshire</p>
-        <p class="m-0 text-center text-gold">Follow us: <i class="fab fa-facebook-square ms-3"></i>
-            <i class="fab fa-twitter-square ms-3"></i>
-            <i class="fab fa-instagram-square ms-3"></i>
-            <i class="fab fa-youtube-square ms-3"></i></p>
+        <p class="m-0 text-center text-gold">Check out my other work <a href="https://github.com/CHCheshire">here</a> on Github</p>
     </footer>
 </body>
 
