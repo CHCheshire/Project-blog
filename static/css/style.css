@@ -158,3 +158,8 @@ body {
     font-size: 24px;
     font-weight: 300;
 }
+
+.btn-comment {
+    color: #CCBA78;
+    background-color: #445261;
+}
