@@ -14,7 +14,7 @@
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
                 {% if "placeholder" in post.featured_image.url %}
-                <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
+                <img src="https://cdn.thisiswhyimbroke.com/thumb/dichroic-glass-d20-dice_400x333.jpg" width="100%">
                 {% else %}
                 <img src="" width="100%">
                 {% endif %}
@@ -106,7 +106,7 @@
 
                 <h3 class="accounts-text">Like the post? Drop a comment!</h3>
                 <p>Posted by: {{ user.username }}</p>
-                <form method="post" style="margin-top: 1.3em;">
+                <form method="post" style="margin-top: 10px;">
                     {{ comment_form | crispy }}
                     {% csrf_token %}
                     <button type="submit" class="btn btn-comment">Submit</button>
