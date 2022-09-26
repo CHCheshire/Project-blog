@@ -1,7 +1,8 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
+from django.contrib import messages
 from django.http import HttpResponseRedirect
-from .models import Post
+from .models import Post, Comment
 from .forms import CommentForm
 
 
@@ -10,7 +11,7 @@ class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1).order_by('-created_on')
     template_name = 'index.html'
     paginate_by = 6
-    
+
 
 class PostDetail(View):
 
@@ -45,8 +46,7 @@ class PostDetail(View):
         comment_form = CommentForm(data=request.POST)
 
         if comment_form.is_valid():
-            comment_form.instance.email = request.user.email
-            comment_form.instance.name = request.user.username
+            comment_form.instance.name = request.user
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.save()
@@ -64,6 +64,7 @@ class PostDetail(View):
             },
         )
 
+
 class PostLike(View):
 
     def post(self, request, slug):
@@ -75,3 +76,29 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+
+def edit_comment(request, comment_id):
+    comment = get_object_or_404(Comment, id=comment_id)
+    comment_form = CommentForm(request.POST or None, instance=comment)
+
+    if request.method == "POST":
+        if comment_form.is_valid():
+            comment_form.save()
+            messages.success(request, "Commented updated!")
+            return redirect(reverse("post_detail", args=[comment.post.slug]))
+        messages.error(request, "Error. Please try again.")
+    template = "edit_comment.html"
+    context = {
+        "comment": comment,
+        "comment_form": comment_form,
+    }
+    return render(request, template, context)
+
+
+def delete_comment(request, comment_id):
+    comment = get_object_or_404(Comment, id=comment_id)
+    if comment.name == request.user:
+        comment.delete()
+        messages.success(request, "Commented deleted!")
+        return redirect(reverse("home"))
