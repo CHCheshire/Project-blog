@@ -4,6 +4,7 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .models import Post, Comment
 from .forms import CommentForm
+from django.core.mail import send_mail
 
 
 class PostList(generic.ListView):
@@ -102,3 +103,6 @@ def delete_comment(request, comment_id):
         comment.delete()
         messages.success(request, "Commented deleted!")
         return redirect(reverse("home"))
+
+
+def email()

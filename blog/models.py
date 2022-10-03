@@ -45,3 +45,10 @@ class Comment(models.Model):
 
     def _str_(self):
         return f"comment {self.body} by {self.name}"
+
+
+class Contact(models.Model):
+
+    subject = models.TextField()
+
+    body = models.TextField()
