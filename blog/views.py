@@ -104,5 +104,3 @@ def delete_comment(request, comment_id):
         messages.success(request, "Commented deleted!")
         return redirect(reverse("home"))
 
-
-def email()
