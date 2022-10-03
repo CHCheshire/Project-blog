@@ -26,9 +26,11 @@ ALLOWED_HOSTS = ['the-hobby-corner.herokuapp.com', 'localhost']
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'cameronhughescheshire@gmail.com'
-EMAIL_HOST_PASSWORD = 'Seraphim343!'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = 'hobbycornermail@gmail.com'
+EMAIL_HOST_PASSWORD = 'jhvmhcrvvonqeusy'
+
+RECIPIENT_ADDRESS = 'pringl31@gmail.com'
 
 # Application definition
 
