@@ -183,3 +183,16 @@ body {
     font-weight: 300;
     font-size: 24px;
 }
+
+.center-form h3 {
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.center-form {
+    padding-top: 15px;
+}
+
+.center-form button {
+    margin-top: 10px;
+}

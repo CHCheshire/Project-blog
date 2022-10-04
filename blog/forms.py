@@ -12,8 +12,8 @@ class CommentForm(forms.ModelForm):
 
 class ContactForm(forms.Form):
 
-    name = forms.CharField(max_length=120)
-    inquiry = forms.CharField(max_length=70)
+    name = forms.CharField(max_length=100)
+    inquiry = forms.CharField(max_length=100)
     message = forms.CharField(widget=forms.Textarea)
 
     def get_info(self):
