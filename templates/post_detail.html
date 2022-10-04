@@ -16,7 +16,7 @@
                 {% if "placeholder" in post.featured_image.url %}
                 <img src="https://cdn.thisiswhyimbroke.com/thumb/dichroic-glass-d20-dice_400x333.jpg" width="100%">
                 {% else %}
-                <img src="" width="100%">
+                <img src='{{ post.featured_image.url }}' width="100%">
                 {% endif %}
             </div>
         </div>
