@@ -3,7 +3,7 @@ from django.views import generic, View
 from django.contrib import messages
 from django.http import HttpResponseRedirect, HttpResponse
 from .models import Post, Comment
-from .forms import CommentForm, ContactForm, EditProfileForm
+from .forms import CommentForm, EditProfileForm
 from django.urls import reverse_lazy
 from django.views.generic import FormView, UpdateView
 
@@ -104,16 +104,6 @@ def delete_comment(request, comment_id):
         comment.delete()
         messages.success(request, "Commented deleted!")
         return redirect(reverse("home"))
-
-
-class ContactView(FormView):
-    template_name = 'contact.html'
-    form_class = ContactForm
-
-    def form_valid(self, form):
-        # Calls the custom send method
-        form.send()
-        return super().form_valid(form)
 
 
 class UserEditView(generic.UpdateView):
