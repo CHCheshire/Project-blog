@@ -20,40 +20,48 @@ The Hobby Corner is a blog webiste for my interests: On there, as a superuser, I
 
 ![Blog Posts](documentation/blog-posts.png)
 
-- __What is Warhammer Section__
-
+- __Login Page__
+  This is where users who have made an account can sign in and from there they can comment on posts, like posts and will have the option to contact me as well. 
  
 
-![What is Warhammer](documentation/what-is-warhammer.png)
+![Login](documentation/login.png)
 
-- __Warhammer:40,000 section__
+- __Register page__
 
-  This section is here to go into details on the universe of Warhammer 40,000; To describe what it's like, what humanity is like in this setting and the other alien and demonic races within it as well. This is meant to inform the user in greater detail compared to the brief overview from the What is Warhammer section that precedes it. 
+  Before the user can login, they must register and sign up to the website. They will have to enter a username and secure password. 
 
-![Warhammer:40,000](documentation/wh-40000.png)
+![Register](documentation/register.png)
 
-- __Warhammer: Age of Sigmar section__
+- __Logout__
 
-This section is here to inform the user of the fantasy setting that is Warhammer: Age of Sigmar and the races that inhabit it as well. This again is designed to be more informative and detailed than the What is Warhammer section.
+  If the user wants, they also have the option to sign out of their account too.
 
-![Warhammer:Age of Sigmar](documentation/wh-aos.png)
+![Logout](documentation/logout.png)
 
-- __Warhammer Games section__
+- __A Blog Post__
 
-This section is here to go into details on the universe of Warhammer 40,000; To describe what it's like, what humanity is like in this setting and the other alien and demonic races within it as well. This is meant to inform the user in greater detail compared to the brief overview from the What is Warhammer section that precedes it. 
+  So here is a blog post itself: The title and image are held within a masthead at the top and the body of the blog itself is below. If an image wasn't selected, it would default to a standard image.
 
-![Warhammer Games](documentation/wh-games.png)
+![A blog post](documentation/post.png)
 
-- __The Footer__ 
+- __Blog Comments__ 
 
-  This has a link to my linkedin and github repository and also to say that the website is made by me. 
+  Here is where users can see their comments and other people's comments, as well as how long ago they were posted. They can also edit them and delete them from here as well. To make a comment a user must be signed in on their account. 
+
+![Comment](documentation/comment.png)
+
+- __Make a comment__
+
+  From here, authenticated users can post comments on a post but these need to be approved by a superuser in Django Admin before they will be visible on the site. 
+
+![Make a comment](documentation/make-a-comment.png)
+
+-__Footer__ 
+
+  This is the footer for the site, from here you can access my Github from the highlighted link
 
 ![Footer](documentation/footer.png)
 
-- __The Subscribe Page__
-
-  - The subscribe page is to allow users to subscribe for more content and information regarding Warhammer. 
-
-![Subscribe](documentation/subscribe.png)
-
 ## Testing 
+
+  So there were several things I tested during the making of this 
