@@ -3,9 +3,9 @@ from django.views import generic, View
 from django.contrib import messages
 from django.http import HttpResponseRedirect, HttpResponse
 from .models import Post, Comment
-from .forms import CommentForm, ContactForm
+from .forms import CommentForm, ContactForm, EditProfileForm
 from django.urls import reverse_lazy
-from django.views.generic import FormView
+from django.views.generic import FormView, UpdateView
 
 
 class PostList(generic.ListView):
@@ -109,9 +109,17 @@ def delete_comment(request, comment_id):
 class ContactView(FormView):
     template_name = 'contact.html'
     form_class = ContactForm
-    success_url = reverse_lazy('contact:success')
 
     def form_valid(self, form):
         # Calls the custom send method
         form.send()
         return super().form_valid(form)
+
+
+class UserEditView(generic.UpdateView):
+    form_class = EditProfileForm
+    template_name = 'edit_profile.html'
+    success_url = reverse_lazy('home')
+
+    def get_object(self):
+        return self.request.user
