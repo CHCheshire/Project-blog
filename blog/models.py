@@ -47,8 +47,10 @@ class Comment(models.Model):
         return f"comment {self.body} by {self.name}"
 
 
-class Contact(models.Model):
+class Profile(models.Model):
 
-    subject = models.TextField()
-
+    user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
     body = models.TextField()
+
+    def __str__(self):
+        return str(self.user)
