@@ -50,7 +50,8 @@ class Comment(models.Model):
 class Profile(models.Model):
 
     user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
-    body = models.TextField()
+    bio = models.TextField()
+    profile_picture = CloudinaryField('image', default='placeholder')
 
     def __str__(self):
         return str(self.user)
