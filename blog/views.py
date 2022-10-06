@@ -8,12 +8,16 @@ from django.urls import reverse_lazy
 from django.views.generic import FormView, UpdateView
 
 
+# lists the posts on the homepage #
+
 class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by('-created_on')
     template_name = 'index.html'
     paginate_by = 6
 
+
+# post detail view to show the data of the post itself #
 
 class PostDetail(View):
 
@@ -67,6 +71,8 @@ class PostDetail(View):
         )
 
 
+# allows the user to like a post #
+
 class PostLike(View):
 
     def post(self, request, slug):
@@ -79,6 +85,8 @@ class PostLike(View):
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
+
+# allows the user to edit their comments #
 
 def edit_comment(request, comment_id):
     comment = get_object_or_404(Comment, id=comment_id)
@@ -97,6 +105,8 @@ def edit_comment(request, comment_id):
     }
     return render(request, template, context)
 
+# allows the user to delete their comments #
+
 
 def delete_comment(request, comment_id):
     comment = get_object_or_404(Comment, id=comment_id)
@@ -105,6 +115,8 @@ def delete_comment(request, comment_id):
         messages.success(request, "Commented deleted!")
         return redirect(reverse("home"))
 
+
+# allows the user to edit their profile #
 
 class UserEditView(generic.UpdateView):
     form_class = EditProfileForm

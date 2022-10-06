@@ -5,10 +5,15 @@ from django.conf import settings
 from django.contrib.auth.models import User
 
 
+# Form for comments #
+
+
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
         fields = ('body',)
+
+# Form for editting profile #
 
 
 class EditProfileForm(UserChangeForm):

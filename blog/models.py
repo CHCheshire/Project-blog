@@ -4,6 +4,8 @@ from cloudinary.models import CloudinaryField
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
+# Model for posts #
+
 
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
@@ -28,6 +30,9 @@ class Post(models.Model):
         return self.likes.count()
 
 
+# Model for comments #
+
+
 class Comment(models.Model):
 
     post = models.ForeignKey(
@@ -43,6 +48,8 @@ class Comment(models.Model):
 
     def _str_(self):
         return f"comment {self.body} by {self.name}"
+
+# model for the superuser to edit profiles #
 
 
 class Profile(models.Model):
