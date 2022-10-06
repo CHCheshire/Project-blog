@@ -42,7 +42,7 @@ The Hobby Corner is a blog webiste for my interests: On there, as a superuser, I
 
   So here is a blog post itself: The title and image are held within a masthead at the top and the body of the blog itself is below. If an image wasn't selected, it would default to a standard image.
 
-![A blog post](documentation/post.png)
+![A blog post](documentation/posts.png)
 
 - __Blog Comments__ 
 
@@ -109,6 +109,97 @@ The Hobby Corner is a blog webiste for my interests: On there, as a superuser, I
  ![project-board](documentation/project-board.png)
  ![issue-comments](documentation/issue-comments.png)
 
+
+### Validator Testing 
+
+  Code Validation:
+  To ensure all code for Gamernetic was correct, validation through various validators was performed. The results are listed below.
+
+  HTML:
+  Homepage: 
+
+  ![homepage-valid](documentation/homepage-valid.png)
+
+  Login:
+
+  ![login-valid](documentation/login-valid.png)
+
+  Logout:
+
+   ![logout-valid](documentation/logout-valid.png)
+
+  Register:
+
+   ![register-valid](documentation/register-valid.png)
+
+  Post:
+
+   ![post-valid](documentation/blog-post-valid.png)
+
+  Edit Profile: 
+
+   ![edit-profile-valid](documentation/edit-profile-valid.png)
+
+   CSS:
+
+   ![css-validation](documentation/css-validation.png)
+
+
+  Python: 
+
+  As of me testing this, the PEP8 validator is currently down so I am unable to validate my code throughout. As a workaround, I will use pycodestyle instead using the following method:
+
+  Run the command pip3 install pycodestyle  Note that this extension may already be installed, in which case this command will do nothing.
+
+  In your workspace, press Ctrl+Shift+P (or Cmd+Shift+P on Mac).
+
+  Type the word linter into the search bar that appears, and click on Python: Select Linter from the filtered results (image 1).
+
+  Select pycodestyle from the list (image 2).
+
+  PEP8 errors will now be underlined in red, as well as being listed in the PROBLEMS tab beside your terminal.
+
+  Using this method, here were the results from my validator testing: 
+
+  Admin:
+
+  ![edit-profile-valid](documentation/admin-valid.png)
+
+  Blog apps: 
+
+  ![apps-valid](documentation/apps-valid.png)
+
+  Forms:
+
+  ![forms-valid](documentation/forms-valid.png)
+
+   Models: 
+
+  ![models-valid](documentation/models-valid.png)
+
+  Blog Urls: 
+
+  ![blog-urls-valid](documentation/urls-valid.png)
+
+  Views:
+
+  ![views-valid](documentation/views-valid.png)
+
+  Settings:
+
+  ![settings-valid](documentation/settings-valid.png)
+
+  ASGI: 
+
+  ![asgi-valid](documentation/asgi-valid.png)
+
+  Hobby-Urls: 
+
+  ![hobby-urls-valid](documentation/urls-hobby-valid.png)
+
+  WSGI: 
+
+  ![wsgi-valid](documentation/wsgi-valid.png)
 
 ### Languages
    - Python
