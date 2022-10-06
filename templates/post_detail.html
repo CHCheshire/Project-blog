@@ -9,14 +9,14 @@
                 <!-- Post title goes in these h1 tags -->
                 <h1 class="post-title">{{ post.title }}</h1>
                 <!-- Post author goes before the | the post's created date goes after -->
-                <p class="post-subtitle"><img src='{{ user.profile.profile_picture.url }}' width="100px" height="100px" class="rounded-circle"> {{ post.author }} | {{ post.created_on }}</p>
+                <p class="post-subtitle"><img src='{{ post.author.profile.profile_picture.url }}' width="100" height="100" class="rounded-circle" alt="Profile Picture"> {{ post.author }} | {{ post.created_on }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
                 {% if "placeholder" in post.featured_image.url %}
-                <img src="https://cdn.thisiswhyimbroke.com/thumb/dichroic-glass-d20-dice_400x333.jpg" width="100%">
+                <img src="https://cdn.thisiswhyimbroke.com/thumb/dichroic-glass-d20-dice_400x333.jpg" class="picture-width" alt=" picture">
                 {% else %}
-                <img src='{{ post.featured_image.url }}' width="100%">
+                <img src='{{ post.featured_image.url }}' class="picture-width" alt="Applied picture">
                 {% endif %}
             </div>
         </div>
@@ -29,9 +29,9 @@
             <div class="card-body">
                 <!-- The post content goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
-                <p class="card-text "> {{ post.content | safe }}</p>
+                {{ post.content | safe }}
                 <div class="row">
-
+                    <hr>
                     <div class="col-1">
                         <strong>
                             {% if user.is_authenticated%}
@@ -68,7 +68,6 @@
     </div>
     <div class="row">
         <div class="col">
-            <hr>
         </div>
     </div>
     <div class="row">

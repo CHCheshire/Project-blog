@@ -6,19 +6,20 @@
     <div class="container">
         <div class="row">
           <div class="col-md-8 mt-3 offset-md-2">
-            <div class="row">
-                <div class="col-12 col-md-6 offset-md-3">
-                    <h2 class="title">Edit your profile here!</h2>
-                    <img src='{{ user.profile.profile_picture.url }}' width="200px" height="200px" class="rounded-circle">
-                </br></br>
-                    {{ user.profile.bio }}
-                    <br/><br/>
-                    <form method="post">
-                        {% csrf_token %}
-                        {{ form.as_p }}
-                        <br>
-                        <button type="submit" class="btn-signup">Submit</button>
-                    </form>
+                <div class="row">
+                    <div class="col-12 col-md-6 offset-md-3">
+                        <h2 class="title">Edit your profile here!</h2>
+                        <img src='{{ user.profile.profile_picture.url }}' width="200" height="200" class="rounded-circle" alt="profile picture">
+                        <br><br>
+                        {{ user.profile.bio }}
+                        <br><br>
+                        <form method="post">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <br>
+                            <button type="submit" class="btn-signup">Submit</button>
+                        </form>
+                    </div>                    
                 </div>
             </div>
         </div>
