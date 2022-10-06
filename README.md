@@ -98,7 +98,7 @@ The Hobby Corner is a blog webiste for my interests: On there, as a superuser, I
 
   ![admin-comment](documentation/admin-comment.png)
 
-  Profile: This data model allows superusers to create profiles or add profiles to existing users. This profile will have a name tied to it as well as a body text that works as a bio for the user. 
+  Profile: This data model allows superusers to create profiles or add profiles to existing users. This profile will have a name tied to it as well as a body text that works as a bio for the user. From here, profile pictures can also be set that will appear on posts this user makes, their comments and when they go to edit their profile as well. 
 
   ![admin-profile](documentation/admin-profile.png)
 
@@ -201,6 +201,15 @@ The Hobby Corner is a blog webiste for my interests: On there, as a superuser, I
 
   ![wsgi-valid](documentation/wsgi-valid.png)
 
+
+  Browser Testing:
+
+  My website successfully loads on Edge, Chrome and Firefox. 
+
+  ![chrome-test](documentation/chrome-test.png)
+  ![firefox-test](documentation/firefox-test.png)
+  ![edge-test](documentation/edge-test.png)
+
 ### Languages
    - Python
    - JavaScript
@@ -282,3 +291,12 @@ In the Deploy tab:
     - Choose the correct repository for your application and click on `Connect`.
 2. You can then choose to deploy the project manually or automatically, automatic deployment will generate a new application every time you push a change to Github, whereas manual deployment requires you to push the `Deploy Branch` button whenever you want a change made.
 3. Once you have chosen your deployment method and have clicked `Deploy Branch` your application will be built and you should now see the `View` button, click this to open your application.
+
+
+### Credits 
+
+Huge thanks to Tim Nelson as my mentor and to Matt Rudge for the CodeStar blog videos. Would also like to thank the Slack Community for their help on this project as well.
+
+### Media
+
+Default image for blog posts ![Default-image](documentation/default.png)

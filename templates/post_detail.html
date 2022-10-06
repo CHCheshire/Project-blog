@@ -76,6 +76,7 @@
                 {% for comment in comments %}
                 <div class="comments" style="padding: 10px;">
                     <p class="font-weight-bold">
+                        <img src='{{ comment.name.profile.profile_picture.url }}' width="50" height="50" class="rounded-circle" alt="Profile Picture">
                         {{ comment.name }}
                         <span class=" text-muted font-weight-normal">
                             <!-- The comment's created date goes here -->
