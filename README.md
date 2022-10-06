@@ -50,6 +50,13 @@ The Hobby Corner is a blog webiste for my interests: On there, as a superuser, I
 
 ![Comment](documentation/comment.png)
 
+
+-__Edit Profile__
+
+  Here is where the user can edit their profile if they so wish, they can add a name to their profile as well as make themselves a superuser if they wanted to as well. 
+
+![Edit-Profile](documentation/edit-profile.png)
+
 - __Make a comment__
 
   From here, authenticated users can post comments on a post but these need to be approved by a superuser in Django Admin before they will be visible on the site. 
@@ -76,6 +83,24 @@ The Hobby Corner is a blog webiste for my interests: On there, as a superuser, I
 
   ![email-error](documentation/email-error.png)
 
+  The feature to send emails was ultimately scrapped due to adding it too late to the project and the problems I ran into I couldn't easily solve. The error I believe was down to the port being blocked but, whether testing on Gitpod or Heroku, the emails wouldn't send either way. This would be something I'd like to come back to in the future instead though. Django does have the functionality for it so it is doable however I'd need to iron out the issues before I can implement it on to a blog website.
+
+
+## Data Models 
+
+  I had several data models for this project: Post, Comment and Profile. 
+
+  Post: This data model was used for actually making the posts on the website itself; it consisted of a Title, Author, Slug, Content, Image and Status. These would all display to the frontend, bar status. The Title would be visible on the homepage as well as the post itself, the slug would work as secondary, more in-depth headline but wasn't necessary for a post. The content was the main body of text and the image would be displayed on the homepage as well in the masthead of the post. The Status was used for the backend and would determine whether a post would be displayed or not. 
+
+  ![admin-post](documentation/admin-post.png)
+
+  Comment: A data model for comments was also made, this would allow users to post comments on to posts but these comments must be approved first. These comments would be tied to a post and would need a user to be authenticated to make comments as well. Comments show the users name on it and the body is a TextField for showing the actual comment itself as well. The created_on field is there to allow people to see when the comment was made as it will show how long ago it was posted. Before comments are posted, they need to approved with Django admin by a superuser. 
+
+  ![admin-comment](documentation/admin-comment.png)
+
+  Profile: This data model allows superusers to create profiles or add profiles to existing users. This profile will have a name tied to it as well as a body text that works as a bio for the user. 
+
+  ![admin-profile](documentation/admin-profile.png)
 
  ### Agile methodology
 
